@@ -1,0 +1,100 @@
+<mat-toolbar>
+
+    <div class="logo-part">
+
+        <div class="youtube">
+            <button (click)="opened=!opened" mat-icon-button class="example-icon"
+                aria-label="Example icon-button with menu icon">
+                <mat-icon>menu</mat-icon>
+            </button>
+
+        </div>
+
+    </div>
+
+    <div class="youtube">
+
+        <i class="ri-youtube-fill"></i>
+        <h1>YouTube</h1>
+    </div>
+
+    <div class="search">
+        <input type="search" name="" id="" placeholder="Search">
+        <button><i class="ri-search-line"></i></button>
+    </div>
+
+
+
+    <div class="profile">
+        <button mat-icon-button  [matMenuTriggerFor]="menu"><i class="ri-notification-3-line"></i></button>
+        <mat-menu #menu="matMenu" class="menu" >
+            <div class="new">
+                <i class="ri-notification-3-line"></i>
+                <h1>No Notification</h1>
+            </div>
+            
+        </mat-menu>
+        <button mat-icon-button routerLink="/profile" ><img src="assets/profile.jpg" alt="profile" class="profile-logo"></button>
+    </div>
+
+
+
+</mat-toolbar>
+
+
+<mat-sidenav-container >
+    <mat-sidenav [(opened)]="opened" #sidenav="matSidenav" >
+        <section class="nav">
+
+            <a mat-button routerLink="">
+                <div class="nav-items">
+                    <mat-icon style="color: rgba(255, 0, 0, 0.74);">home</mat-icon>
+                    <h4>Home</h4>
+                </div>
+            </a>
+
+            <!-- <a mat-button routerLink="/profile">
+                <div class="nav-items">
+                    <h4>Library</h4>
+                </div>
+            </a> -->
+            
+            <a mat-button href="https://music.youtube.com/">
+                <div class="nav-items">
+                    <mat-icon>library_music</mat-icon>
+                    <h4>Music</h4>
+                </div>
+            </a>
+            <hr>
+        </section>
+
+      
+        <section class="nav">
+
+            <a mat-button href="#">
+                <div class="nav-items">
+                    <mat-icon>thumb_up</mat-icon>
+                    <h4>Likes videos</h4>
+                </div>
+            </a>
+
+            <a mat-button href="#">
+                <div class="nav-items">
+                    <mat-icon>history</mat-icon>
+                    <h4>History</h4>
+                </div>
+            </a>
+
+            <a mat-button href="#">
+                <div class="nav-items">
+                    <mat-icon>watch_later</mat-icon>
+                    <h4>Watch later</h4>
+                </div>
+            </a>
+        </section>
+
+    </mat-sidenav>
+    <mat-sidenav-content>
+        <router-outlet></router-outlet>
+    </mat-sidenav-content>
+</mat-sidenav-container>

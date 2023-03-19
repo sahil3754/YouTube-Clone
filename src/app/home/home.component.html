@@ -1,0 +1,53 @@
+<div class="filters">
+    <div class="elem" *ngFor="let i of Filters">
+        <button mat-button>{{i.name}}</button>
+    </div>
+
+</div>
+
+<!-- <div class="content" *ngFor="let i of YouTube">
+
+
+    <div class="video-container">
+        <img src="https://i.ytimg.com/vi/0kWMHEOwbis/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLBirt2cmJbPJFQjMsiGMC_TYihM1Q"
+            alt="">
+
+        <div class="other">
+            <div>
+                <img src="https://yt3.ggpht.com/ytc/AL5GRJVD5TqFjzR5Jcwl6BcQslG0-bItNiovtJPXUQCg=s68-c-k-c0x00ffffff-no-rj"
+                    alt="">
+            </div>
+            <div class="other-R">
+                <h1>Landing Page With HTML & CSS | 05 | Sheryians Coding School</h1>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div> -->
+
+<div class="content">
+
+    <div class="video-container" *ngFor="let i of YouTube">
+
+        <a href="{{i.link}}">
+            <img src="{{i.tumb}}" alt="Tumbnail">
+
+            <div class="other">
+                <div>
+                    <img src="{{i.logo}}" alt="Logo">
+                </div>
+                <div class="other-R">
+                    <h1>{{i.title}}</h1>
+
+                </div>
+
+            </div>
+        </a>
+
+    </div>
+
+
+</div>

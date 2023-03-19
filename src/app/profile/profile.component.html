@@ -1,0 +1,84 @@
+<div class="banner"></div>
+
+
+<div class="youtube-channel">
+
+    <div class="left">
+        <div class="y-logo">
+            <img src="assets/profile.jpg" alt="Channel Logo">
+        </div>
+
+        <div class="y-title">
+            <div class="tick">
+                <h1>Sahil Kushwaha</h1>
+                <i class="ri-checkbox-circle-line"></i>
+            </div>
+            <h3>@sahil002</h3>
+            <h4>10M subscribers</h4>
+        </div>
+
+    </div>
+
+    <div class="right">
+        <button mat-raised-button class="join">Join</button>
+        <button mat-raised-button class="subscribe" (click)="subscribe()" *ngIf="sub1">Subscribe</button>
+        <button mat-raised-button class="subscribe" *ngIf="sub2"><i class="ri-notification-3-fill"
+                style="font-size: 18px;"></i> Subscribed</button>
+    </div>
+
+</div>
+
+
+
+<div class="other-part">
+    <mat-tab-group>
+        <mat-tab label="Home">
+            <div class="content">
+
+                <div class="video-container" *ngFor="let i of YouTube">
+
+                    <a href="{{i.link}}">
+                        <img src="{{i.tumb}}" alt="Tumbnail">
+
+                        <div class="other">
+
+                            <div class="other-R">
+                                <h1>{{i.title}}</h1>
+
+                            </div>
+
+                        </div>
+                    </a>
+
+                </div>
+
+
+            </div>
+
+        </mat-tab>
+        <mat-tab label="About">
+            <div class="youtube">
+
+                <i class="ri-youtube-fill"></i>
+                <h1>YouTube</h1>
+            </div>
+           <div class="about-us">
+            <p>
+                Hello everyone, my name is Sahil Kushwaha and I am excited to share with you my latest project: a YouTube
+                clone! I have developed this project using Angular and it's currently in the demo version, which means
+                it's only for coding practice purposes and not a real YouTube platform.
+
+                My aim is to continue adding more features to the clone in the future, making it similar to the real
+                YouTube. I believe that coding practice is important for any developer, and this project has allowed me
+                to hone my skills in Angular and frontend development.
+
+                I am passionate about creating high-quality, user-friendly applications, and I hope that this project
+                will showcase my abilities in this area. Thank you for taking the time to learn more about my YouTube
+                clone project, and I look forward to sharing updates with you as I continue to develop it.
+            </p>
+
+           </div>
+        </mat-tab>
+
+    </mat-tab-group>
+</div>
